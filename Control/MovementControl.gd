@@ -11,7 +11,7 @@ func _process(delta):
 		rotation -= angular_speed
 	rotate_object_local(Vector3.UP, rotation * delta)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var movement = Vector3()
 	if Input.is_action_pressed("camera_forward"):
 		movement += Vector3.FORWARD
@@ -23,5 +23,6 @@ func _physics_process(delta):
 		movement += Vector3.RIGHT
 	
 	movement = movement.normalized().rotated(Vector3.UP, rotation.y)
+# warning-ignore:return_value_discarded
 	move_and_slide(movement * linear_speed)
 	
