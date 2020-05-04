@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Radar/Radar_material.tres" type="Material" id=1]
+[ext_resource path="res://Control/CameraControl.gd" type="Script" id=2]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
 
 [node name="Spatial" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
+environment = SubResource( 1 )
+far = 50.0
+script = ExtResource( 2 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91652, -0.0757091, -7.97333 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91652, -0.0757091, -7.7644 )
 width = 8.746
 material = ExtResource( 1 )
