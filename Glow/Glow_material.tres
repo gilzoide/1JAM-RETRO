@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=2]
 
-[ext_resource path="res://Radar/Radar_shader.shader" type="Shader" id=1]
+[ext_resource path="res://Glow/Glow_shader.shader" type="Shader" id=1]
 [ext_resource path="res://Palletes/Gradient_green.tres" type="Texture" id=2]
 
 [resource]
