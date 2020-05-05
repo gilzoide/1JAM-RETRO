@@ -2,6 +2,8 @@ extends KinematicBody
 
 export(float) var linear_speed = 5
 export(float) var angular_speed = deg2rad(45)
+var is_moving = false
+onready var animationPlayer = $AnimationPlayer
 
 func _process(delta):
 	var rotation = 0
@@ -10,6 +12,9 @@ func _process(delta):
 	if Input.is_action_pressed("camera_rotate_right"):
 		rotation -= angular_speed
 	rotate_object_local(Vector3.UP, rotation * delta)
+	
+	if is_moving and not animationPlayer.is_playing():
+		animationPlayer.play("PlayerLinearMove")
 
 func _physics_process(_delta):
 	var movement = Vector3()
@@ -23,6 +28,9 @@ func _physics_process(_delta):
 		movement += Vector3.RIGHT
 	
 	movement = movement.normalized().rotated(Vector3.UP, rotation.y)
-# warning-ignore:return_value_discarded
-	move_and_slide(movement * linear_speed)
-	
+	var speed = move_and_slide(movement * linear_speed)
+	is_moving = speed.length_squared() > 0
+
+func stop_movement_animation():
+	if not is_moving:
+		animationPlayer.stop()
