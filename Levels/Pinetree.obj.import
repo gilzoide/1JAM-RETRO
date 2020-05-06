@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Pinetree.obj-6c4f122a5e34aa6bb8bbb98df664745d.mesh"
+
+[deps]
+
+files=[ "res://.import/Pinetree.obj-6c4f122a5e34aa6bb8bbb98df664745d.mesh" ]
+
+source_file="res://Levels/Pinetree.obj"
+dest_files=[ "res://.import/Pinetree.obj-6c4f122a5e34aa6bb8bbb98df664745d.mesh", "res://.import/Pinetree.obj-6c4f122a5e34aa6bb8bbb98df664745d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

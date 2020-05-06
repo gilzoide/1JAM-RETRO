@@ -1,7 +1,7 @@
 extends KinematicBody
 
 export(float) var linear_speed = 5
-export(float) var angular_speed = deg2rad(45)
+export(float) var angular_speed = deg2rad(60)
 var is_moving = false
 onready var animationPlayer = $AnimationPlayer
 

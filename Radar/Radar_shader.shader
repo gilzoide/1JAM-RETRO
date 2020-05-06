@@ -7,8 +7,8 @@ uniform sampler2D pallete;
 const float DISTANCE_FACTOR = 1.0 / 2.0;
 const float DISTANCE_BIAS = 2.0;
 const float TEXTURE_WIDTH = 4.0; // assume texture have only 4 pixels
-const float NEAR_EDGE_MIN = 0.005;
-const float NEAR_EDGE_MAX = 0.995;
+const float NEAR_EDGE_MIN = 0.002;
+const float NEAR_EDGE_MAX = 0.998;
 
 varying vec3 position_from_camera;
 
@@ -23,7 +23,7 @@ void vertex() {
 }
 
 void fragment() {
-	bool near_edge = UV.x < NEAR_EDGE_MIN || UV.x > NEAR_EDGE_MAX || UV.y < NEAR_EDGE_MIN || UV.y > NEAR_EDGE_MAX;
+	bool near_edge = UV.x <= NEAR_EDGE_MIN || UV.x >= NEAR_EDGE_MAX || UV.y <= NEAR_EDGE_MIN || UV.y >= NEAR_EDGE_MAX;
 	float near_edge_bias = float(near_edge) * TEXTURE_WIDTH;
 	
 	float distance_to_camera = length(position_from_camera);
