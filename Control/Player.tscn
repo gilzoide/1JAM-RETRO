@@ -4,6 +4,8 @@
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
+ambient_light_energy = 0.0
+ambient_light_sky_contribution = 0.0
 
 [sub_resource type="CapsuleShape" id=2]
 radius = 0.3
@@ -50,3 +52,8 @@ shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/PlayerLinearMove = SubResource( 3 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.979301, 0.202411, 0, -0.202411, 0.979301, 0, 0, 0 )
+light_energy = 6.21
+spot_range = 8.0

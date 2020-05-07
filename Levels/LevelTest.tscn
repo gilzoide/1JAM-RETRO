@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Radar/Radar_material.tres" type="Material" id=1]
+[ext_resource path="res://Visuals/Scenario_material.tres" type="Material" id=1]
 [ext_resource path="res://Control/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Glow/Glow_material.tres" type="Material" id=3]
 [ext_resource path="res://Levels/Pinetree.tscn" type="PackedScene" id=4]
@@ -63,7 +63,7 @@ height = 0.4
 depth = 0.808969
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.95012, 0, -2.83005 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.7517, 0, 0.179133 )
 
 [node name="Spatial" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78298, 0, 2.90337 )

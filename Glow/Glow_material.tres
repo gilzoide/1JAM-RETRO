@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=2]
 
 [ext_resource path="res://Glow/Glow_shader.shader" type="Shader" id=1]
-[ext_resource path="res://Radar/Outline_material.tres" type="Material" id=2]
+[ext_resource path="res://Visuals/Outline_material.tres" type="Material" id=2]
 
 [resource]
 next_pass = ExtResource( 2 )
