@@ -13,7 +13,6 @@ vec4 snap_to_palette(float x) {
 }
 
 void fragment() {
-	float x = texture(TEXTURE, SCREEN_UV).x;
-	//COLOR = vec4(x, x, x, 1.0);
-	COLOR = snap_to_palette(x);
+	vec4 pixel = texture(TEXTURE, UV);
+	COLOR = snap_to_palette(pixel.r);
 }
