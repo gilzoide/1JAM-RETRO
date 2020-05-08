@@ -3,6 +3,8 @@
 [ext_resource path="res://Visuals/Scenario_material.tres" type="Material" id=1]
 [ext_resource path="res://Levels/Pinetree.obj" type="ArrayMesh" id=2]
 
+
+
 [sub_resource type="CylinderShape" id=1]
 height = 2.77728
 

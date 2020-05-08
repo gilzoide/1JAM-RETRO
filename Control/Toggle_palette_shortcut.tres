@@ -1,7 +1,8 @@
 [gd_resource type="ShortCut" load_steps=2 format=2]
 
-[sub_resource type="InputEventKey" id=1]
-scancode = 80
+[sub_resource type="InputEventAction" id=1]
+action = "toggle_palette"
+pressed = true
 
 [resource]
 shortcut = SubResource( 1 )

@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Visuals/Outline_material.tres" type="Material" id=1]
 
-
 [resource]
 next_pass = ExtResource( 1 )
 metallic_specular = 0.0
