@@ -1,11 +1,11 @@
 extends VBoxContainer
 
-export(NodePath) var viewport_container_path
-onready var viewport_container: ViewportContainer = get_node(viewport_container_path)
+export(NodePath) var root_container_path
+onready var root_container: ViewportContainer = get_node(root_container_path)
 export(Material) var palette_material
 
 func set_apply_palette(apply: bool):
-	viewport_container.material = palette_material if apply else null
+	root_container.material = palette_material if apply else null
 
 
 func _on_LightRange_value_changed(value: float):
