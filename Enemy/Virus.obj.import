@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Virus.obj-5c69b0cb7d7e3311782fdff2001cc3e3.mesh"
+
+[deps]
+
+files=[ "res://.import/Virus.obj-5c69b0cb7d7e3311782fdff2001cc3e3.mesh" ]
+
+source_file="res://Enemy/Virus.obj"
+dest_files=[ "res://.import/Virus.obj-5c69b0cb7d7e3311782fdff2001cc3e3.mesh", "res://.import/Virus.obj-5c69b0cb7d7e3311782fdff2001cc3e3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

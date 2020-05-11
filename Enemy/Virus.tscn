@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Visuals/Scenario_material.tres" type="Material" id=1]
+[ext_resource path="res://Glow/Glow_material.tres" type="Material" id=2]
+[ext_resource path="res://Enemy/Virus.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Enemy/Virus.gd" type="Script" id=4]
+
+[sub_resource type="SphereShape" id=3]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Virus"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Mesh:translation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1.2, 1.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0.3, 0 ), Vector3( 0, 0.3, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape:translation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0.3, 0.8, 1.2, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.3, 0 ), Vector3( 0, 0.3, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Virus" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0375, 0 )
+script = ExtResource( 4 )
+
+[node name="Mesh" type="MeshInstance" parent="."]
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 1 )
+material/1 = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 5.26478e-05, 0.000775657, -5.38999e-05, 0.999999, 0.00162086, -0.000775571, -0.00162091, 0.999998, 0, -0.0375, 0 )
+shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Virus"
+anims/Virus = SubResource( 2 )
