@@ -42,3 +42,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78298, 0, 2.90337 )
 
 [node name="Virus" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.0871558, 0, -0.996195, 0, 1, 0, 0.996195, 0, 0.0871558, 0, 0.416425, -3.06286 )
+
+[node name="Virus2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0871558, 0, -0.996195, 0, 1, 0, 0.996195, 0, 0.0871558, -3.02725, 0.416425, -4.19607 )

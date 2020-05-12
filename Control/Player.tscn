@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Control/MovementControl.gd" type="Script" id=1]
+[ext_resource path="res://Control/MinimapDetector.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -57,3 +58,5 @@ anims/PlayerLinearMove = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 0.979301, 0.202411, 0, -0.202411, 0.979301, 0, 0, 0 )
 light_energy = 6.21
 spot_range = 8.0
+
+[node name="MinimapDetector" parent="." instance=ExtResource( 2 )]
