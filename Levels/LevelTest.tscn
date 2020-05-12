@@ -35,7 +35,7 @@ width = 8.746
 material = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.7517, 0, 0.179133 )
+transform = Transform( 0.0552289, 0, 0.998474, 0, 1, 0, -0.998474, 0, 0.0552289, 9.35619, -2.38419e-07, -5.45817 )
 
 [node name="Spatial" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78298, 0, 2.90337 )

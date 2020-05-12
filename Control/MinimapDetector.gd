@@ -12,5 +12,5 @@ func _process(_delta):
 		var relative_body_position = to_local(body_position)
 		var point = relative_body_position * inverse_radius
 		points.append(Vector2(point.x, point.z))
-	minimap.set_points(points)
-	minimap.set_rotation(global_transform.basis.get_euler().y)
+	minimap.update_points(points)
+	minimap.update_rotation(global_transform.basis.get_euler().y)
