@@ -18,6 +18,7 @@ _global_script_class_icons={
 config/name="Coronga"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://Icon/icon.ico"
 
 [input]
 
