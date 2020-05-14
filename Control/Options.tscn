@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Control/Options.gd" type="Script" id=1]
+[ext_resource path="res://UI/Toggle_palette_shortcut.tres" type="ShortCut" id=2]
+[ext_resource path="res://Palletes/Palette_material.tres" type="Material" id=3]
+
+[node name="Options" type="VBoxContainer"]
+margin_top = -1.0
+margin_right = 145.0
+margin_bottom = 59.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+root_container_path = NodePath("..")
+palette_material = ExtResource( 3 )
+
+[node name="PaletteCheckButton" type="CheckButton" parent="."]
+margin_right = 145.0
+margin_bottom = 40.0
+pressed = true
+shortcut = ExtResource( 2 )
+text = "Palette (P)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="HBoxContainer" parent="."]
+margin_top = 44.0
+margin_right = 145.0
+margin_bottom = 60.0
+
+[node name="Label" type="Label" parent="Control"]
+margin_top = 1.0
+margin_right = 70.0
+margin_bottom = 15.0
+text = "Light range"
+
+[node name="HSlider" type="HSlider" parent="Control"]
+margin_left = 74.0
+margin_right = 145.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="toggled" from="PaletteCheckButton" to="." method="set_apply_palette"]
+[connection signal="value_changed" from="Control/HSlider" to="." method="_on_LightRange_value_changed"]
