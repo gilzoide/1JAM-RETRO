@@ -6,6 +6,9 @@ onready var radius = $CollisionShape.shape.radius
 onready var inverse_radius = 1.0 / radius
 
 func _process(_delta):
+	if minimap == null:
+		return
+	
 	var points = PoolVector2Array()
 	for b in get_overlapping_bodies():
 		var body_position = b.global_transform.origin
